@@ -1,0 +1,53 @@
+$*************HEADING***********************************
+$
+PROJECT  'Limassol'  'run1'
+$
+$ waves in the Port of Limassol, Cyprus
+$
+$***********MODEL INPUT*********************************
+$
+SET LEVEL=0. DEPMIN 0.0001 BACKVISC 1.e-5
+$
+CGRID REGular -20. -20. 0.  2680. 3500. 536 1750
+$
+VERT 2
+$
+INPgrid BOTTOM REG -20. -20. 0. 536 700 5. 5. EXCP=-10.
+READinp BOTTOM 1. 'limassol2c.bot' 1 0 FREE
+
+INPGRID POROS REG -20. -20. 0. 536 700 5. 5. EXCP=-1.
+READINP POROS 1. 'limassol2c.por' 1 0 FREE
+$
+INIT ZERO
+$
+BOUnd SHAPespec JON SIG PEAK DSPR POWER
+BOUnd SIDE S BTYPE WEAK SMOO 5 SEC ADDB CON SPECT h=2.81 per=7.06 dir=110 2. 15 MIN
+$
+BREAK
+POROSITY size=0.1
+$
+NONHYDrostatic BOX PREC ILU
+DISCRET UPW MOM
+DISCRET UPW UMOM V NONE
+$
+TIMEI METH 0.1 0.5
+$
+$************ OUTPUT REQUESTS *************************
+$
+QUANTITY XP YP HEXP=10
+QUANT HS DUR 15 MIN
+$
+POINTS 'punten' FILE 'limassol.pnt'
+TABLE  'punten' HEAD 'hs.tbl' XP YP HSIG
+$TABLE 'punten' NOHEAD 'limassol15.tbl' TSEC XP YP BOTLEV WATL OUTPUT 001000.000 0.5 SEC
+$TABLE 'punten' HEAD   'limassol17.tbl' TSEC XP YP WATL VEL OUTPUT 000000.000 0.5 SEC
+$
+$BLOCK 'COMPGRID' NOHEAD 'som17w.mat'  XP YP WATL  OUTPUT 002400.000 0.25 SEC
+$BLOCK 'COMPGRID' NOHEAD 'som17w.mat'  XP YP WATL  OUTPUT 000800.000 0.5 SEC
+BLOCK 'COMPGRID' NOHEAD 'som17h.mat'  XP YP HSIG
+BLOCK 'COMPGRID' NOHEAD 'som17d.mat'  XP YP BOTLEV
+$
+$***************************** COMPUTATIONS ***************************************
+$
+COMPUTE 000000.000 0.03 SEC 002500.000
+STOP

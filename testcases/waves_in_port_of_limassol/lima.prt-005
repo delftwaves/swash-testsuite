@@ -1,0 +1,173 @@
+1
+
+                    Execution started at 20260309.110157         
+
+
+
+                    ---------------------------------------
+                                     SWASH
+                         WAVE MOTION IN COASTAL WATERS     
+                             VERSION NUMBER 11.01ABC            
+                    ---------------------------------------
+
+
+    
+ $*************HEADING***********************************
+    
+ $
+    
+ PROJECT  'Limassol'  'run1'
+    
+ $
+    
+ $ waves in the Port of Limassol, Cyprus
+    
+ $
+    
+ $***********MODEL INPUT*********************************
+    
+ $
+    
+ SET LEVEL=0. DEPMIN 0.0001 BACKVISC 1.e-5
+    
+ $
+    
+ CGRID REGular -20. -20. 0.  2680. 3500. 536 1750
+    
+ $
+    
+ VERT 2
+    
+ $
+    
+ INPgrid BOTTOM REG -20. -20. 0. 536 700 5. 5. EXCP=-10.
+    
+ READinp BOTTOM 1. 'limassol2c.bot' 1 0 FREE
+    
+ 
+    
+ INPGRID POROS REG -20. -20. 0. 536 700 5. 5. EXCP=-1.
+    
+ READINP POROS 1. 'limassol2c.por' 1 0 FREE
+    
+ $
+    
+ INIT ZERO
+    
+ $
+    
+ BOUnd SHAPespec JON SIG PEAK DSPR POWER
+    
+ BOUnd SIDE S BTYPE WEAK SMOO 5 SEC ADDB CON SPECT h=2.81 per=7.06 dir=110 2. 15 MIN
+    
+ $
+    
+ BREAK
+    
+ POROSITY size=0.1
+    
+ $
+    
+ NONHYDrostatic BOX PREC ILU
+    
+ DISCRET UPW MOM
+    
+ DISCRET UPW UMOM V NONE
+    
+ $
+    
+ TIMEI METH 0.1 0.5
+    
+ $
+    
+ $************ OUTPUT REQUESTS *************************
+    
+ $
+    
+ QUANTITY XP YP HEXP=10
+    
+ QUANT HS DUR 15 MIN
+    
+ $
+    
+ POINTS 'punten' FILE 'limassol.pnt'
+    
+ TABLE  'punten' HEAD 'hs.tbl' XP YP HSIG
+    
+ $TABLE 'punten' NOHEAD 'limassol15.tbl' TSEC XP YP BOTLEV WATL OUTPUT 001000.000 0.5 SEC
+    
+ $TABLE 'punten' HEAD   'limassol17.tbl' TSEC XP YP WATL VEL OUTPUT 000000.000 0.5 SEC
+    
+ $
+    
+ $BLOCK 'COMPGRID' NOHEAD 'som17w.mat'  XP YP WATL  OUTPUT 002400.000 0.25 SEC
+    
+ $BLOCK 'COMPGRID' NOHEAD 'som17w.mat'  XP YP WATL  OUTPUT 000800.000 0.5 SEC
+    
+ BLOCK 'COMPGRID' NOHEAD 'som17h.mat'  XP YP HSIG
+    
+ BLOCK 'COMPGRID' NOHEAD 'som17d.mat'  XP YP BOTLEV
+    
+ $
+    
+ $***************************** COMPUTATIONS ***************************************
+    
+ $
+    
+ COMPUTE 000000.000 0.03 SEC 002500.000
+
+----------------------------------------------------------------
+                  COMPUTATIONAL PART OF SWASH
+----------------------------------------------------------------
+
+ Non-hydrostatic mode of SWASH is activated
+ Water depth is divided into   2 layers
+ Approximate dispersion relation is employed
+ Advection approximation is strictly momentum conservative
+ The Cartesian convention for velocity direction is used
+ Cartesian coordinate system is used
+ Computational grid is rectilinear
+ Gridresolution       : MXC             533 MYC            147
+                      : MCGRD         74636
+ Mesh sizes           : DX       0.5000E+01 DY      0.2000E+01
+ Drying/flooding      : DEPMIN   0.1000E-03 DPSOPT           2
+ Physical constants   : GRAV     0.9813E+01 RHOW    0.1023E+04
+                      : RHOA     0.1205E+01 DYNVIS  0.1000E-02
+ Wind input           : WSPEED   0.0000E+00 DIR     0.0000E+00
+ Wind stress is off
+ Bottom friction is off
+ Vegetation is off
+ Wave breaking control: ALPHA    0.6000E+00 BETA    0.3000E+00
+ Baroclinic forcing is off
+ Coriolis forcing is off
+ No transport of constituent
+ Horizontal viscosity is off
+ Const vert viscosity : VVISC    0.1000E-04
+ Porosity             : ALPHA0   0.2000E+03 BETA0   0.1100E+01
+ Leap-frog scheme     : CFLLOW   0.1000E+00 CFLHIG  0.5000E+00
+ Non-hydrostatic pres : THETA    0.1000E+01
+ Vertical terms u-mom : THETA    0.5000E+00
+ Vertical terms w-mom : THETA    0.5000E+00
+ Horz advection u-mom : PROPSC            3 KAPPA   0.1000E+01
+                      : M        0.0000E+00 PHI     0.0000E+00
+ Vert advection u-mom : PROPSC            3 KAPPA   0.1000E+01
+                      : M        0.0000E+00 PHI     0.0000E+00
+ Horz advection w-mom : PROPSC            3 KAPPA  -0.1000E+01
+                      : M        0.0000E+00 PHI     0.0000E+00
+ Vert advection w-mom : PROPSC            6 KAPPA   0.0000E+00
+                      : M        0.2000E+01 PHI     0.0000E+00
+ Correction water dep : PROPSC            6 KAPPA   0.0000E+00
+                      : M        0.2000E+01 PHI     0.0000E+00
+ Pressure correction method is employed
+ Sponge layer widths  : LEFT     0.0000E+00 RIGHT   0.0000E+00
+                      : LOWER    0.0000E+00 UPPER   0.0000E+00
+ Time of simulation  ->  000000.030         in sec:          0.03000
+ Time of simulation  ->  000000.060         in sec:          0.06000
+ Time of simulation  ->  000000.090         in sec:          0.09000
+
+---------------------- skipped to save storage ---------------------
+
+ Time of simulation  ->  002459.970         in sec:       1499.97000
+ Time of simulation  ->  002459.999         in sec:       1500.00000
+    
+ STOP
