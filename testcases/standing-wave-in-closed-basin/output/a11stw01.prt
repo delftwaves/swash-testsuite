@@ -1,0 +1,508 @@
+1
+
+                    Execution started at 20260320.110402         
+
+
+
+                    ---------------------------------------
+                                     SWASH
+                         WAVE MOTION IN COASTAL WATERS     
+                             VERSION NUMBER 11.01ABC            
+                    ---------------------------------------
+
+
+    
+ $*************HEADING***********************************
+    
+ $
+    
+ PROJ 'A11stw01' 'A11'
+    
+ $
+    
+ $  Standing short wave in closed basin (kh = 0.55pi)
+    
+ $
+    
+ $ --|--------------------------------------------------------------|--
+    
+ $   | This SWASH input file is part of the bench mark tests for    |
+    
+ $   | SWASH. More information about this test can be found in      |
+    
+ $   | an accompanied document.                                     |
+    
+ $ --|--------------------------------------------------------------|--
+    
+ $
+    
+ $***********MODEL INPUT*********************************
+    
+ $
+    
+ MODE DYN ONED
+    
+ $
+    
+ CGRID 0. 0. 0. 20. 0. 20 0
+    
+ $
+    
+ VERT 1
+    
+ $
+    
+ INPGRID BOTTOM 0. 0. 0. 1 0 20. 1.
+    
+ READINP BOTTOM 5.5 'a11stwav.bot' 1 0 FREE
+    
+ $
+    
+ INPGRID WLEV 0. 0. 0. 20 0 1. 1.
+    
+ READINP WLEV 1. 'a11stwav.wlv' 1 0 FREE
+    
+ $
+    
+ FRIC CONST 0.
+    
+ VISC 0.
+    
+ NONHYDrostatic
+    
+ $
+    
+ DISCRET UPW NONE
+    
+ DISCRET CORRDEP NONE
+    
+ $
+    
+ $************ OUTPUT REQUESTS *************************
+    
+ $
+    
+ GROUP 'GAUGE' 18 18 1 1
+    
+ TABLE 'GAUGE' NOHEAD 'a11stw01.tbl' TSEC WATL OUTPUT 000000.000 0.01 SEC
+    
+ $
+    
+ TEST 1,0
+    
+ COMPUTE 000000.000 0.08 SEC 000030.000
+
+----------------------------------------------------------------
+                  COMPUTATIONAL PART OF SWASH
+----------------------------------------------------------------
+
+ One-dimensional mode of SWASH is activated
+ Non-hydrostatic mode of SWASH is activated
+ Depth-averaged mode of SWASH is activated
+ Approximate dispersion relation is employed
+ The Cartesian convention for velocity direction is used
+ Cartesian coordinate system is used
+ Computational grid is rectilinear
+ Gridresolution       : MXC              22 MYC              2
+                      : MCGRD            23
+ Mesh sizes           : DX       0.1000E+01 DY      0.0000E+00
+ Drying/flooding      : DEPMIN   0.5000E-04 DPSOPT           2
+ Physical constants   : GRAV     0.9813E+01 RHOW    0.1023E+04
+                      : RHOA     0.1205E+01 DYNVIS  0.1000E-02
+ Wind input           : WSPEED   0.0000E+00 DIR     0.0000E+00
+ Wind stress is off
+ Const bottom friction: CF       0.0000E+00
+ Vegetation is off
+ No wave breaking control
+ Baroclinic forcing is off
+ Coriolis forcing is off
+ No transport of constituent
+ Const horz viscosity : VISC     0.0000E+00
+ Vertical viscosity is off
+ Porosity is off
+ Leap-frog scheme     : CFLLOW   0.4000E+00 CFLHIG  0.8000E+00
+ Non-hydrostatic pres : THETA    0.1000E+01
+ Horz advection u-mom : PROPSC            3 KAPPA   0.1000E+01
+                      : M        0.0000E+00 PHI     0.0000E+00
+ Correction water dep : PROPSC            3 KAPPA   0.1000E+01
+                      : M        0.0000E+00 PHI     0.0000E+00
+ Pressure correction method is employed
+ Sponge layer widths  : LEFT     0.0000E+00 RIGHT   0.0000E+00
+                      : LOWER    0.0000E+00 UPPER   0.0000E+00
+ Time of simulation  ->  000000.080         in sec:          0.08000
+ Time of simulation  ->  000000.160         in sec:          0.16000
+ Time of simulation  ->  000000.240         in sec:          0.24000
+ Time of simulation  ->  000000.320         in sec:          0.32000
+ Time of simulation  ->  000000.400         in sec:          0.40000
+ Time of simulation  ->  000000.480         in sec:          0.48000
+ Time of simulation  ->  000000.560         in sec:          0.56000
+ Time of simulation  ->  000000.640         in sec:          0.64000
+ Time of simulation  ->  000000.720         in sec:          0.72000
+ Time of simulation  ->  000000.800         in sec:          0.80000
+ Time of simulation  ->  000000.880         in sec:          0.88000
+ Time of simulation  ->  000000.960         in sec:          0.96000
+ Time of simulation  ->  000001.040         in sec:          1.04000
+ Time of simulation  ->  000001.120         in sec:          1.12000
+ Time of simulation  ->  000001.200         in sec:          1.20000
+ Time of simulation  ->  000001.280         in sec:          1.28000
+ Time of simulation  ->  000001.360         in sec:          1.36000
+ Time of simulation  ->  000001.440         in sec:          1.44000
+ Time of simulation  ->  000001.520         in sec:          1.52000
+ Time of simulation  ->  000001.600         in sec:          1.60000
+ Time of simulation  ->  000001.680         in sec:          1.68000
+ Time of simulation  ->  000001.760         in sec:          1.76000
+ Time of simulation  ->  000001.840         in sec:          1.84000
+ Time of simulation  ->  000001.920         in sec:          1.92000
+ Time of simulation  ->  000002.000         in sec:          2.00000
+ Time of simulation  ->  000002.080         in sec:          2.08000
+ Time of simulation  ->  000002.160         in sec:          2.16000
+ Time of simulation  ->  000002.240         in sec:          2.24000
+ Time of simulation  ->  000002.320         in sec:          2.32000
+ Time of simulation  ->  000002.400         in sec:          2.40000
+ Time of simulation  ->  000002.480         in sec:          2.48000
+ Time of simulation  ->  000002.560         in sec:          2.56000
+ Time of simulation  ->  000002.640         in sec:          2.64000
+ Time of simulation  ->  000002.720         in sec:          2.72000
+ Time of simulation  ->  000002.800         in sec:          2.80000
+ Time of simulation  ->  000002.880         in sec:          2.88000
+ Time of simulation  ->  000002.960         in sec:          2.96000
+ Time of simulation  ->  000003.040         in sec:          3.04000
+ Time of simulation  ->  000003.120         in sec:          3.12000
+ Time of simulation  ->  000003.200         in sec:          3.20000
+ Time of simulation  ->  000003.280         in sec:          3.28000
+ Time of simulation  ->  000003.360         in sec:          3.36000
+ Time of simulation  ->  000003.440         in sec:          3.44000
+ Time of simulation  ->  000003.520         in sec:          3.52000
+ Time of simulation  ->  000003.600         in sec:          3.60000
+ Time of simulation  ->  000003.680         in sec:          3.68000
+ Time of simulation  ->  000003.760         in sec:          3.76000
+ Time of simulation  ->  000003.840         in sec:          3.84000
+ Time of simulation  ->  000003.920         in sec:          3.92000
+ Time of simulation  ->  000004.000         in sec:          4.00000
+ Time of simulation  ->  000004.080         in sec:          4.08000
+ Time of simulation  ->  000004.160         in sec:          4.16000
+ Time of simulation  ->  000004.240         in sec:          4.24000
+ Time of simulation  ->  000004.320         in sec:          4.32000
+ Time of simulation  ->  000004.400         in sec:          4.40000
+ Time of simulation  ->  000004.480         in sec:          4.48000
+ Time of simulation  ->  000004.560         in sec:          4.56000
+ Time of simulation  ->  000004.640         in sec:          4.64000
+ Time of simulation  ->  000004.720         in sec:          4.72000
+ Time of simulation  ->  000004.800         in sec:          4.80000
+ Time of simulation  ->  000004.880         in sec:          4.88000
+ Time of simulation  ->  000004.960         in sec:          4.96000
+ Time of simulation  ->  000005.040         in sec:          5.04000
+ Time of simulation  ->  000005.120         in sec:          5.12000
+ Time of simulation  ->  000005.200         in sec:          5.20000
+ Time of simulation  ->  000005.280         in sec:          5.28000
+ Time of simulation  ->  000005.360         in sec:          5.36000
+ Time of simulation  ->  000005.440         in sec:          5.44000
+ Time of simulation  ->  000005.520         in sec:          5.52000
+ Time of simulation  ->  000005.600         in sec:          5.60000
+ Time of simulation  ->  000005.680         in sec:          5.68000
+ Time of simulation  ->  000005.760         in sec:          5.76000
+ Time of simulation  ->  000005.840         in sec:          5.84000
+ Time of simulation  ->  000005.920         in sec:          5.92000
+ Time of simulation  ->  000006.000         in sec:          6.00000
+ Time of simulation  ->  000006.080         in sec:          6.08000
+ Time of simulation  ->  000006.160         in sec:          6.16000
+ Time of simulation  ->  000006.240         in sec:          6.24000
+ Time of simulation  ->  000006.320         in sec:          6.32000
+ Time of simulation  ->  000006.400         in sec:          6.40000
+ Time of simulation  ->  000006.480         in sec:          6.48000
+ Time of simulation  ->  000006.560         in sec:          6.56000
+ Time of simulation  ->  000006.640         in sec:          6.64000
+ Time of simulation  ->  000006.720         in sec:          6.72000
+ Time of simulation  ->  000006.800         in sec:          6.80000
+ Time of simulation  ->  000006.880         in sec:          6.88000
+ Time of simulation  ->  000006.960         in sec:          6.96000
+ Time of simulation  ->  000007.040         in sec:          7.04000
+ Time of simulation  ->  000007.120         in sec:          7.12000
+ Time of simulation  ->  000007.200         in sec:          7.20000
+ Time of simulation  ->  000007.280         in sec:          7.28000
+ Time of simulation  ->  000007.360         in sec:          7.36000
+ Time of simulation  ->  000007.440         in sec:          7.44000
+ Time of simulation  ->  000007.520         in sec:          7.52000
+ Time of simulation  ->  000007.600         in sec:          7.60000
+ Time of simulation  ->  000007.680         in sec:          7.68000
+ Time of simulation  ->  000007.760         in sec:          7.76000
+ Time of simulation  ->  000007.840         in sec:          7.84000
+ Time of simulation  ->  000007.920         in sec:          7.92000
+ Time of simulation  ->  000008.000         in sec:          8.00000
+ Time of simulation  ->  000008.080         in sec:          8.08000
+ Time of simulation  ->  000008.160         in sec:          8.16000
+ Time of simulation  ->  000008.240         in sec:          8.24000
+ Time of simulation  ->  000008.320         in sec:          8.32000
+ Time of simulation  ->  000008.400         in sec:          8.40000
+ Time of simulation  ->  000008.480         in sec:          8.48000
+ Time of simulation  ->  000008.560         in sec:          8.56000
+ Time of simulation  ->  000008.640         in sec:          8.64000
+ Time of simulation  ->  000008.720         in sec:          8.72000
+ Time of simulation  ->  000008.800         in sec:          8.80000
+ Time of simulation  ->  000008.880         in sec:          8.88000
+ Time of simulation  ->  000008.960         in sec:          8.96000
+ Time of simulation  ->  000009.040         in sec:          9.04000
+ Time of simulation  ->  000009.120         in sec:          9.12000
+ Time of simulation  ->  000009.200         in sec:          9.20000
+ Time of simulation  ->  000009.280         in sec:          9.28000
+ Time of simulation  ->  000009.360         in sec:          9.36000
+ Time of simulation  ->  000009.440         in sec:          9.44000
+ Time of simulation  ->  000009.520         in sec:          9.52000
+ Time of simulation  ->  000009.600         in sec:          9.60000
+ Time of simulation  ->  000009.680         in sec:          9.68000
+ Time of simulation  ->  000009.760         in sec:          9.76000
+ Time of simulation  ->  000009.840         in sec:          9.84000
+ Time of simulation  ->  000009.920         in sec:          9.92000
+ Time of simulation  ->  000010.000         in sec:         10.00000
+ Time of simulation  ->  000010.080         in sec:         10.08000
+ Time of simulation  ->  000010.160         in sec:         10.16000
+ Time of simulation  ->  000010.240         in sec:         10.24000
+ Time of simulation  ->  000010.320         in sec:         10.32000
+ Time of simulation  ->  000010.400         in sec:         10.40000
+ Time of simulation  ->  000010.480         in sec:         10.48000
+ Time of simulation  ->  000010.560         in sec:         10.56000
+ Time of simulation  ->  000010.640         in sec:         10.64000
+ Time of simulation  ->  000010.720         in sec:         10.72000
+ Time of simulation  ->  000010.800         in sec:         10.80000
+ Time of simulation  ->  000010.880         in sec:         10.88000
+ Time of simulation  ->  000010.960         in sec:         10.96000
+ Time of simulation  ->  000011.040         in sec:         11.04000
+ Time of simulation  ->  000011.120         in sec:         11.12000
+ Time of simulation  ->  000011.200         in sec:         11.20000
+ Time of simulation  ->  000011.280         in sec:         11.28000
+ Time of simulation  ->  000011.360         in sec:         11.36000
+ Time of simulation  ->  000011.440         in sec:         11.44000
+ Time of simulation  ->  000011.520         in sec:         11.52000
+ Time of simulation  ->  000011.600         in sec:         11.60000
+ Time of simulation  ->  000011.680         in sec:         11.68000
+ Time of simulation  ->  000011.760         in sec:         11.76000
+ Time of simulation  ->  000011.840         in sec:         11.84000
+ Time of simulation  ->  000011.920         in sec:         11.92000
+ Time of simulation  ->  000012.000         in sec:         12.00000
+ Time of simulation  ->  000012.080         in sec:         12.08000
+ Time of simulation  ->  000012.160         in sec:         12.16000
+ Time of simulation  ->  000012.240         in sec:         12.24000
+ Time of simulation  ->  000012.320         in sec:         12.32000
+ Time of simulation  ->  000012.400         in sec:         12.40000
+ Time of simulation  ->  000012.480         in sec:         12.48000
+ Time of simulation  ->  000012.560         in sec:         12.56000
+ Time of simulation  ->  000012.640         in sec:         12.64000
+ Time of simulation  ->  000012.720         in sec:         12.72000
+ Time of simulation  ->  000012.800         in sec:         12.80000
+ Time of simulation  ->  000012.880         in sec:         12.88000
+ Time of simulation  ->  000012.960         in sec:         12.96000
+ Time of simulation  ->  000013.040         in sec:         13.04000
+ Time of simulation  ->  000013.120         in sec:         13.12000
+ Time of simulation  ->  000013.200         in sec:         13.20000
+ Time of simulation  ->  000013.280         in sec:         13.28000
+ Time of simulation  ->  000013.360         in sec:         13.36000
+ Time of simulation  ->  000013.440         in sec:         13.44000
+ Time of simulation  ->  000013.520         in sec:         13.52000
+ Time of simulation  ->  000013.600         in sec:         13.60000
+ Time of simulation  ->  000013.680         in sec:         13.68000
+ Time of simulation  ->  000013.760         in sec:         13.76000
+ Time of simulation  ->  000013.840         in sec:         13.84000
+ Time of simulation  ->  000013.920         in sec:         13.92000
+ Time of simulation  ->  000014.000         in sec:         14.00000
+ Time of simulation  ->  000014.080         in sec:         14.08000
+ Time of simulation  ->  000014.160         in sec:         14.16000
+ Time of simulation  ->  000014.240         in sec:         14.24000
+ Time of simulation  ->  000014.320         in sec:         14.32000
+ Time of simulation  ->  000014.400         in sec:         14.40000
+ Time of simulation  ->  000014.480         in sec:         14.48000
+ Time of simulation  ->  000014.560         in sec:         14.56000
+ Time of simulation  ->  000014.640         in sec:         14.64000
+ Time of simulation  ->  000014.720         in sec:         14.72000
+ Time of simulation  ->  000014.800         in sec:         14.80000
+ Time of simulation  ->  000014.880         in sec:         14.88000
+ Time of simulation  ->  000014.960         in sec:         14.96000
+ Time of simulation  ->  000015.040         in sec:         15.04000
+ Time of simulation  ->  000015.120         in sec:         15.12000
+ Time of simulation  ->  000015.200         in sec:         15.20000
+ Time of simulation  ->  000015.280         in sec:         15.28000
+ Time of simulation  ->  000015.360         in sec:         15.36000
+ Time of simulation  ->  000015.440         in sec:         15.44000
+ Time of simulation  ->  000015.520         in sec:         15.52000
+ Time of simulation  ->  000015.600         in sec:         15.60000
+ Time of simulation  ->  000015.680         in sec:         15.68000
+ Time of simulation  ->  000015.760         in sec:         15.76000
+ Time of simulation  ->  000015.840         in sec:         15.84000
+ Time of simulation  ->  000015.920         in sec:         15.92000
+ Time of simulation  ->  000016.000         in sec:         16.00000
+ Time of simulation  ->  000016.080         in sec:         16.08000
+ Time of simulation  ->  000016.160         in sec:         16.16000
+ Time of simulation  ->  000016.240         in sec:         16.24000
+ Time of simulation  ->  000016.320         in sec:         16.32000
+ Time of simulation  ->  000016.400         in sec:         16.40000
+ Time of simulation  ->  000016.480         in sec:         16.48000
+ Time of simulation  ->  000016.560         in sec:         16.56000
+ Time of simulation  ->  000016.640         in sec:         16.64000
+ Time of simulation  ->  000016.720         in sec:         16.72000
+ Time of simulation  ->  000016.800         in sec:         16.80000
+ Time of simulation  ->  000016.880         in sec:         16.88000
+ Time of simulation  ->  000016.960         in sec:         16.96000
+ Time of simulation  ->  000017.040         in sec:         17.04000
+ Time of simulation  ->  000017.120         in sec:         17.12000
+ Time of simulation  ->  000017.200         in sec:         17.20000
+ Time of simulation  ->  000017.280         in sec:         17.28000
+ Time of simulation  ->  000017.360         in sec:         17.36000
+ Time of simulation  ->  000017.440         in sec:         17.44000
+ Time of simulation  ->  000017.520         in sec:         17.52000
+ Time of simulation  ->  000017.600         in sec:         17.60000
+ Time of simulation  ->  000017.680         in sec:         17.68000
+ Time of simulation  ->  000017.760         in sec:         17.76000
+ Time of simulation  ->  000017.840         in sec:         17.84000
+ Time of simulation  ->  000017.920         in sec:         17.92000
+ Time of simulation  ->  000017.999         in sec:         18.00000
+ Time of simulation  ->  000018.080         in sec:         18.08000
+ Time of simulation  ->  000018.160         in sec:         18.16000
+ Time of simulation  ->  000018.240         in sec:         18.24000
+ Time of simulation  ->  000018.320         in sec:         18.32000
+ Time of simulation  ->  000018.400         in sec:         18.40000
+ Time of simulation  ->  000018.480         in sec:         18.48000
+ Time of simulation  ->  000018.560         in sec:         18.56000
+ Time of simulation  ->  000018.640         in sec:         18.64000
+ Time of simulation  ->  000018.720         in sec:         18.72000
+ Time of simulation  ->  000018.800         in sec:         18.80000
+ Time of simulation  ->  000018.880         in sec:         18.88000
+ Time of simulation  ->  000018.960         in sec:         18.96000
+ Time of simulation  ->  000019.040         in sec:         19.04000
+ Time of simulation  ->  000019.120         in sec:         19.12000
+ Time of simulation  ->  000019.200         in sec:         19.20000
+ Time of simulation  ->  000019.280         in sec:         19.28000
+ Time of simulation  ->  000019.360         in sec:         19.36000
+ Time of simulation  ->  000019.440         in sec:         19.44000
+ Time of simulation  ->  000019.520         in sec:         19.52000
+ Time of simulation  ->  000019.600         in sec:         19.60000
+ Time of simulation  ->  000019.680         in sec:         19.68000
+ Time of simulation  ->  000019.760         in sec:         19.76000
+ Time of simulation  ->  000019.840         in sec:         19.84000
+ Time of simulation  ->  000019.920         in sec:         19.92000
+ Time of simulation  ->  000019.999         in sec:         20.00000
+ Time of simulation  ->  000020.080         in sec:         20.08000
+ Time of simulation  ->  000020.160         in sec:         20.16000
+ Time of simulation  ->  000020.240         in sec:         20.24000
+ Time of simulation  ->  000020.320         in sec:         20.32000
+ Time of simulation  ->  000020.400         in sec:         20.40000
+ Time of simulation  ->  000020.480         in sec:         20.48000
+ Time of simulation  ->  000020.560         in sec:         20.56000
+ Time of simulation  ->  000020.640         in sec:         20.64000
+ Time of simulation  ->  000020.720         in sec:         20.72000
+ Time of simulation  ->  000020.800         in sec:         20.80000
+ Time of simulation  ->  000020.880         in sec:         20.88000
+ Time of simulation  ->  000020.960         in sec:         20.96000
+ Time of simulation  ->  000021.040         in sec:         21.04000
+ Time of simulation  ->  000021.120         in sec:         21.12000
+ Time of simulation  ->  000021.200         in sec:         21.20000
+ Time of simulation  ->  000021.280         in sec:         21.28000
+ Time of simulation  ->  000021.360         in sec:         21.36000
+ Time of simulation  ->  000021.440         in sec:         21.44000
+ Time of simulation  ->  000021.520         in sec:         21.52000
+ Time of simulation  ->  000021.600         in sec:         21.60000
+ Time of simulation  ->  000021.680         in sec:         21.68000
+ Time of simulation  ->  000021.760         in sec:         21.76000
+ Time of simulation  ->  000021.840         in sec:         21.84000
+ Time of simulation  ->  000021.920         in sec:         21.92000
+ Time of simulation  ->  000021.999         in sec:         22.00000
+ Time of simulation  ->  000022.080         in sec:         22.08000
+ Time of simulation  ->  000022.160         in sec:         22.16000
+ Time of simulation  ->  000022.240         in sec:         22.24000
+ Time of simulation  ->  000022.320         in sec:         22.32000
+ Time of simulation  ->  000022.400         in sec:         22.40000
+ Time of simulation  ->  000022.480         in sec:         22.48000
+ Time of simulation  ->  000022.560         in sec:         22.56000
+ Time of simulation  ->  000022.640         in sec:         22.64000
+ Time of simulation  ->  000022.720         in sec:         22.72000
+ Time of simulation  ->  000022.800         in sec:         22.80000
+ Time of simulation  ->  000022.880         in sec:         22.88000
+ Time of simulation  ->  000022.960         in sec:         22.96000
+ Time of simulation  ->  000023.040         in sec:         23.04000
+ Time of simulation  ->  000023.120         in sec:         23.12000
+ Time of simulation  ->  000023.200         in sec:         23.20000
+ Time of simulation  ->  000023.280         in sec:         23.28000
+ Time of simulation  ->  000023.360         in sec:         23.36000
+ Time of simulation  ->  000023.440         in sec:         23.44000
+ Time of simulation  ->  000023.520         in sec:         23.52000
+ Time of simulation  ->  000023.600         in sec:         23.60000
+ Time of simulation  ->  000023.680         in sec:         23.68000
+ Time of simulation  ->  000023.760         in sec:         23.76000
+ Time of simulation  ->  000023.840         in sec:         23.84000
+ Time of simulation  ->  000023.920         in sec:         23.92000
+ Time of simulation  ->  000023.999         in sec:         24.00000
+ Time of simulation  ->  000024.080         in sec:         24.08000
+ Time of simulation  ->  000024.160         in sec:         24.16000
+ Time of simulation  ->  000024.240         in sec:         24.24000
+ Time of simulation  ->  000024.320         in sec:         24.32000
+ Time of simulation  ->  000024.400         in sec:         24.40000
+ Time of simulation  ->  000024.480         in sec:         24.48000
+ Time of simulation  ->  000024.560         in sec:         24.56000
+ Time of simulation  ->  000024.640         in sec:         24.64000
+ Time of simulation  ->  000024.720         in sec:         24.72000
+ Time of simulation  ->  000024.800         in sec:         24.80000
+ Time of simulation  ->  000024.880         in sec:         24.88000
+ Time of simulation  ->  000024.960         in sec:         24.96000
+ Time of simulation  ->  000025.040         in sec:         25.04000
+ Time of simulation  ->  000025.120         in sec:         25.12000
+ Time of simulation  ->  000025.200         in sec:         25.20000
+ Time of simulation  ->  000025.280         in sec:         25.28000
+ Time of simulation  ->  000025.360         in sec:         25.36000
+ Time of simulation  ->  000025.440         in sec:         25.44000
+ Time of simulation  ->  000025.520         in sec:         25.52000
+ Time of simulation  ->  000025.600         in sec:         25.60000
+ Time of simulation  ->  000025.680         in sec:         25.68000
+ Time of simulation  ->  000025.760         in sec:         25.76000
+ Time of simulation  ->  000025.840         in sec:         25.84000
+ Time of simulation  ->  000025.920         in sec:         25.92000
+ Time of simulation  ->  000025.999         in sec:         26.00000
+ Time of simulation  ->  000026.080         in sec:         26.08000
+ Time of simulation  ->  000026.160         in sec:         26.16000
+ Time of simulation  ->  000026.240         in sec:         26.24000
+ Time of simulation  ->  000026.320         in sec:         26.32000
+ Time of simulation  ->  000026.400         in sec:         26.40000
+ Time of simulation  ->  000026.480         in sec:         26.48000
+ Time of simulation  ->  000026.560         in sec:         26.56000
+ Time of simulation  ->  000026.640         in sec:         26.64000
+ Time of simulation  ->  000026.720         in sec:         26.72000
+ Time of simulation  ->  000026.800         in sec:         26.80000
+ Time of simulation  ->  000026.880         in sec:         26.88000
+ Time of simulation  ->  000026.960         in sec:         26.96000
+ Time of simulation  ->  000027.040         in sec:         27.04000
+ Time of simulation  ->  000027.120         in sec:         27.12000
+ Time of simulation  ->  000027.200         in sec:         27.20000
+ Time of simulation  ->  000027.280         in sec:         27.28000
+ Time of simulation  ->  000027.360         in sec:         27.36000
+ Time of simulation  ->  000027.440         in sec:         27.44000
+ Time of simulation  ->  000027.520         in sec:         27.52000
+ Time of simulation  ->  000027.600         in sec:         27.60000
+ Time of simulation  ->  000027.680         in sec:         27.68000
+ Time of simulation  ->  000027.760         in sec:         27.76000
+ Time of simulation  ->  000027.840         in sec:         27.84000
+ Time of simulation  ->  000027.920         in sec:         27.92000
+ Time of simulation  ->  000027.999         in sec:         28.00000
+ Time of simulation  ->  000028.080         in sec:         28.08000
+ Time of simulation  ->  000028.160         in sec:         28.16000
+ Time of simulation  ->  000028.240         in sec:         28.24000
+ Time of simulation  ->  000028.320         in sec:         28.32000
+ Time of simulation  ->  000028.400         in sec:         28.40000
+ Time of simulation  ->  000028.480         in sec:         28.48000
+ Time of simulation  ->  000028.560         in sec:         28.56000
+ Time of simulation  ->  000028.640         in sec:         28.64000
+ Time of simulation  ->  000028.720         in sec:         28.72000
+ Time of simulation  ->  000028.800         in sec:         28.80000
+ Time of simulation  ->  000028.880         in sec:         28.88000
+ Time of simulation  ->  000028.960         in sec:         28.96000
+ Time of simulation  ->  000029.040         in sec:         29.04000
+ Time of simulation  ->  000029.120         in sec:         29.12000
+ Time of simulation  ->  000029.200         in sec:         29.20000
+ Time of simulation  ->  000029.280         in sec:         29.28000
+ Time of simulation  ->  000029.360         in sec:         29.36000
+ Time of simulation  ->  000029.440         in sec:         29.44000
+ Time of simulation  ->  000029.520         in sec:         29.52000
+ Time of simulation  ->  000029.600         in sec:         29.60000
+ Time of simulation  ->  000029.680         in sec:         29.68000
+ Time of simulation  ->  000029.760         in sec:         29.76000
+ Time of simulation  ->  000029.840         in sec:         29.84000
+ Time of simulation  ->  000029.920         in sec:         29.92000
+ Time of simulation  ->  000029.999         in sec:         30.00000
+    
+ STOP
