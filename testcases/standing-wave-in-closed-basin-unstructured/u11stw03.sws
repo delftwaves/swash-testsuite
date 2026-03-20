@@ -1,0 +1,34 @@
+$*************HEADING***********************************
+$
+PROJ 'U11stw03' 'U11'
+$
+$  Standing short wave in closed basin (kh = 0.55pi)
+$
+$ --|--------------------------------------------------------------|--
+$   | This SWASH input file is part of the bench mark tests for    |
+$   | SWASH. More information about this test can be found in      |
+$   | an accompanied document.                                     |
+$ --|--------------------------------------------------------------|--
+$
+$***********MODEL INPUT*********************************
+$
+CGRID UNSTRUCTURED
+READ UNSTRUCTURED 'u11stwav'
+$
+INPGRID BOTTOM 0. 0. 0. 1 1 20. 5.
+READINP BOTTOM 5.5 'u11stwav.bot' 5 0 FREE
+$
+INPGRID WLEV 0. 0. 0. 20 1 1. 5.
+READINP WLEV 1. 'u11stwav.wlv' 5 0 FREE
+$
+FRIC $ this will keep THETAC and THETAS to 0.5 (instead of 0.51)
+NONHYDrostatic BOX 0.5 PROJ
+$
+$************ OUTPUT REQUESTS *************************
+$
+POINT 'GAUGE' 17.8 2.5
+TABLE 'GAUGE' NOHEAD 'u11stw03.tbl' TSEC WATL OUTPUT 000000.000 0.1 SEC
+$
+TEST 1,0
+COMPUTE 000000.000 0.1 SEC 000030.000
+STOP
