@@ -17,3 +17,5 @@ The aim of the SWASH test suite is twofold.
 * To familiarize (new) users with setting up and running the SWASH model.
 
 In the `testcases` folder, you will find a variety of test cases. Each test case contains input files as well as output files for verification. Run instructions are also provided.
+
+For the installation of SWASH on your own computer, HPC cluster, or in the cloud, click [here](https://delftwaves.github.io/swash-docs/getting_started/install.html).
